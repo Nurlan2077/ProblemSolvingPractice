@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task2\bin\Debug\Task2.exe.config
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task2\bin\Debug\Task2.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task2\bin\Debug\Task2.pdb
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task2\obj\Debug\Task2.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task2\obj\Debug\Task2.pdb
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task2\obj\Debug\Task2.csprojAssemblyReference.cache

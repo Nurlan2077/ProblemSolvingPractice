@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Practice\bin\Debug\Practice.exe.config
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Practice\bin\Debug\Practice.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Practice\bin\Debug\Practice.pdb
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Practice\obj\Debug\Practice.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Practice\obj\Debug\Practice.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Practice\obj\Debug\Practice.pdb
