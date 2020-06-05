@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task3\bin\Debug\Task3.exe.config
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task3\bin\Debug\Task3.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task3\bin\Debug\Task3.pdb
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task3\obj\Debug\Task3.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task3\obj\Debug\Task3.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task3\obj\Debug\Task3.pdb
