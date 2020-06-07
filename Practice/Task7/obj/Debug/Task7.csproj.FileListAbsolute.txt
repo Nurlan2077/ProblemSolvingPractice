@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task7\bin\Debug\Task7.exe.config
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task7\bin\Debug\Task7.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task7\bin\Debug\Task7.pdb
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task7\obj\Debug\Task7.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task7\obj\Debug\Task7.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task7\obj\Debug\Task7.pdb
