@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task12\bin\Debug\Task12.exe.config
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task12\bin\Debug\Task12.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task12\bin\Debug\Task12.pdb
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task12\obj\Debug\Task12.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task12\obj\Debug\Task12.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task12\obj\Debug\Task12.pdb
