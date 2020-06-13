@@ -4,66 +4,14 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.IO;
+using System.Threading;
 
 namespace Practice
 {
-    // Найти пустой подграф из K вершин.
-    class Task8
+    // Задача 8 - Найти пустой подграф из K вершин.
+    public class Task8
     {
-        static void Main(string[] args)
-        {
-            string filePath = "../../input.txt";
-
-            int[][] graph = ReadFromFile(filePath);
-
-            ShowGraph(graph);
-
-            List<Sets> output = FindEmptySubgraphs(graph);
-
-            Console.WriteLine("Введите количество вершин:");
-            int num = CheckUserInput(0);
-
-            Console.WriteLine("Пустые подграфы: ");
-
-            bool isNumFits = false;
-
-            foreach (Sets elem in output)
-            {
-                if (elem.Count == num)
-                {
-                    isNumFits = true;
-                    foreach (int el in elem)
-                    {
-                        Console.Write(el + " ");
-                    }
-                }
-                
-                Console.WriteLine();
-            }
-
-            if (!isNumFits && output.Count > 0)
-            {
-                Console.WriteLine("Пустых подграфов с введенным количеством вершин нет.");
-                Console.WriteLine();
-
-                Console.WriteLine("Есть пустые подграфы: ");
-
-                foreach (Sets elem in output)
-                {
-                    foreach (int el in elem)
-                    {
-                        Console.Write(el + " ");
-                    }
-
-                    Console.WriteLine();
-                }
-            }
-
-        }
-        
-
-
-        // Поиск пустых подграфов
+        // Метод для поиска пустых подграфов.
         public static List<Sets> FindEmptySubgraphs(int[][] graph)
         {
             List<Sets> indPointList = FindIndependentPoints(graph);
@@ -107,7 +55,7 @@ namespace Practice
         }
 
 
-        // Находит внутренние независимые множества.
+        // Метод для поиска внутренних независимых множеств.
         public static List<Sets> FindIndependentPoints(int[][] input)
         {
             List<Sets> independents = new List<Sets>();
@@ -192,34 +140,74 @@ namespace Practice
         }
 
 
-        // Чтение из файла в массив.
+        // Метод для генерации матрицы смежности.
+        public static int[][] GenerateInput()
+        {
+            Random rand = new Random(DateTime.Now.Millisecond);
+
+            int rank = rand.Next(3, 10);        // Получает случайное кол-во строк и столбцов матрицы.
+            int[][] output = new int[rank][];   // Сгенерированный массив.
+
+            // Создает строки.
+            for(int line = 0; line < rank; line++)
+            {
+                output[line] = new int[rank];
+
+                // Создает столбцы.
+                for(int row = 0; row < rank; row++)
+                {
+                    output[line][row] = rand.Next(0, 2);
+
+                    Thread.Sleep(1);  // Приостанавливает поток для обновления датчика случайных чисел.
+                }
+            
+            }
+
+            return output;
+        }
+
+
+        // Метод для чтения из файла в массив.
         public static int[][] ReadFromFile(string path)
         {
             StreamReader reader = new StreamReader(path);
 
             string input = reader.ReadLine();
 
-            // Первая линия для подсчёта количества элементов.
-            int[] firstLine = Regex.Split(input.Trim(), @"\s+").Select(Int32.Parse).ToArray();
+            int i = 0;
 
-            int[][] graph = new int[firstLine.Length][];
-
-            graph[0] = firstLine;
-
-            // Считывает все элементы в массив.
-            for (int i = 1; i < graph.Length; i++)
+            try
             {
-                int[] temp = new int[firstLine.Length];
-                temp = reader.ReadLine().Trim().Split(' ').Select(Int32.Parse).ToArray();
+                // Первая линия для подсчёта количества элементов.
+                int[] firstLine = Regex.Split(input.Trim(), @"\s+").Select(Int32.Parse).ToArray();
 
-                graph[i] = temp;
+                int[][] graph = new int[firstLine.Length][];
+
+                graph[0] = firstLine;
+
+
+                // Считывает все элементы в массив.
+                for (i = 1; i < graph.Length; i++)
+                {
+                    int[] temp = new int[firstLine.Length];
+                    temp = reader.ReadLine().Trim().Split(' ').Select(Int32.Parse).ToArray();
+
+                    graph[i] = temp;
+                }
+
+                return graph;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine($"Во входном файле строка {i} содержит не только числа.");
+                int[][] empty = new int[0][];
+                return empty;
             }
 
-            return graph;
         }
 
 
-        // Вывод графа.
+        // Метод для вывода графа.
         public static void ShowGraph(int[][] mas)
         {
             int lenght = mas.Length;    // Количество массивов в ступенчатом массиве.
@@ -255,6 +243,7 @@ namespace Practice
 
             Console.WriteLine();
         }
+
 
         // Метод, проверяющий ввод пользователя.
         // Позволяет установить нижнюю границу для ввода.
