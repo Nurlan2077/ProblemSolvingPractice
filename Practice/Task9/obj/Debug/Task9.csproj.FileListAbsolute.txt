@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task9\bin\Debug\Task9.exe.config
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task9\bin\Debug\Task9.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task9\bin\Debug\Task9.pdb
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task9\obj\Debug\Task9.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task9\obj\Debug\Task9.exe
+C:\Users\user\Desktop\Документы\HSE\Практика\Practice\Task9\obj\Debug\Task9.pdb
