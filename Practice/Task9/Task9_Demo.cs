@@ -47,6 +47,15 @@ namespace Task9
             }
 
             Console.WriteLine($"Разность суммы чётных и суммы нечётных чисел равна: {CalculateDifference(ringList)}");
+            Console.WriteLine();
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("*Рекурсивный метод*");
+            Console.ForegroundColor = ConsoleColor.White;
+
+            int sum   = 0;
+            int count = 0;
+            CalculateDifferenceRecursion(ringList.head, ref sum, ref count);
 
             Console.ReadLine();
         }

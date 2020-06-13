@@ -16,7 +16,7 @@ namespace Practice
             Node current = ring.head;    // Указывает на головной элемент.
 
             int sumEvens = 0;
-            int sumOdds = 0;
+            int sumOdds  = 0;
 
             // Пока не дойдет до хвостого элемента,
             // выводит элементы.
@@ -35,6 +35,38 @@ namespace Practice
             }
 
             return sumEvens - sumOdds;
+        }
+
+
+        // Дополнительный рекурсивный метод для подсчёта суммы элементов и их количества.
+        public static int CalculateDifferenceRecursion(Node current, ref int sum, ref int count)
+        {
+            if (current.data % 2 == 0)
+            {
+                sum += current.data;
+            }
+            else
+            {
+                sum -= current.data;
+            }
+
+            count++;
+            
+            if(current.next == null)
+            {
+                Console.WriteLine($"Разность чётных и нечётных элементов в кольцевом списке: {sum}");
+                Console.WriteLine($"Количество элементов в кольцевом списке: {count}");
+
+                return sum;
+
+            }
+            else
+            {
+                CalculateDifferenceRecursion(current.next, ref sum, ref count);
+            }
+
+
+            return sum;
         }
 
 
