@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Task5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task5_Demo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
