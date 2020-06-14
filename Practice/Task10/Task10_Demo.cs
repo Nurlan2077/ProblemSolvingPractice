@@ -27,6 +27,8 @@ namespace Practice
             tree.DeleteTree();  // Удаление дерева.
 
             tree.Show();        // Вывод дерева.
+
+            Console.ReadLine();
         }
     }
 }
