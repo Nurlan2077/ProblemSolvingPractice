@@ -60,6 +60,8 @@ namespace Practice
             ShowMas(SelectionSort(chaotic));
 
             Console.WriteLine();
+
+            Console.ReadLine();
         }
     }
 }
