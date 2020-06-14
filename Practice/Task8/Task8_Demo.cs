@@ -76,6 +76,7 @@ namespace Task8
                 Console.WriteLine("Пустых подграфов нет.");
             }
 
+            Console.ReadLine();
         }
     }
 }
