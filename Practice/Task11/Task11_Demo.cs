@@ -31,7 +31,7 @@ namespace Practice
             output = Decode(input);
             ShowMas(output);
 
-
+            Console.ReadLine();
         }
     }
 }
