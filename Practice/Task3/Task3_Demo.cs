@@ -27,6 +27,8 @@ namespace Practice
             {
                 Console.WriteLine($"Точка ({pointX};{pointY}) не принадлежит графику.");
             }
+
+            Console.ReadLine();
         }
     }
 
