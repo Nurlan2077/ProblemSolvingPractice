@@ -12,8 +12,8 @@ namespace Practice
         // Демонстрация различных видов сортировки массивов.
         static void Main(string[] args)
         {
-            int[] chaotic   = new int[] { 10, 1, 8, 2, 3, 4, 7, 6, 5, 9 };         // Неупорядоченный массив.
-            int[] rising    = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };         // По возрастанию.
+            int[] chaotic   = new int[] { 10, 1, 8, 2, 3, 4, 7, 6, 5, 9 };      // Неупорядоченный массив.
+            int[] rising    = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };      // По возрастанию.
             int[] declining = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };      // По убыванию.
 
             Console.ForegroundColor = ConsoleColor.Green;

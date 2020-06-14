@@ -12,12 +12,14 @@ namespace Practice
         // Сортировка вставками.
         public static int[] InsertionSort(int[] input)
         {
-            int countTransfer = 0;      // Количество перемещений элементов массива.
+            int countTransfer   = 0;    // Количество перемещений элементов массива.
             int countComparison = 0;    // Количество сравнений.
 
             // Проходит по всем элементам массива.
             for (int actualCursor = 1; actualCursor < input.Length; actualCursor++)
             {
+                countComparison++;
+
                 int unsortedCursor;
 
                 int temp = input[actualCursor];  // Вспомог. перемен. хранит текущ. элемент.
@@ -25,6 +27,7 @@ namespace Practice
                 // Проходит по несортированной части.
                 for (unsortedCursor = actualCursor - 1; unsortedCursor >= 0; unsortedCursor--)
                 {
+                    countComparison++;
 
                     countComparison++;
 
@@ -52,17 +55,21 @@ namespace Practice
             return input;
         }
 
+
+        // Метод для сортировки простым выбором.
         public static int[] SelectionSort(int[] input)
         {
             int min;                    // Хранит мин. значение.
             int temp;                   // Вспомог. перемен. для хранения предыдущ. элемента.
-            int countTransfer = 0;      // Количество перемещений элементов массива.
+            int countTransfer   = 0;    // Количество перемещений элементов массива.
             int countComparison = 0;    // Количество сравнений.
 
 
             // Проходит по всем элементам массива.
             for (int sortedCursor = 0; sortedCursor < input.Length - 1; sortedCursor++)
             {
+                countComparison++;
+
 
                 min = sortedCursor;    // Текущий элемент становится минимальным.
 
@@ -71,6 +78,8 @@ namespace Practice
                 // Проходит по остальным элементам массива.
                 for (int unsortedCursor = sortedCursor + 1; unsortedCursor < input.Length; unsortedCursor++)
                 {
+                    countComparison++;
+
                     countComparison++;
 
                     // Если след. элемент меньше текущего минимума,
@@ -134,7 +143,7 @@ namespace Practice
                     countComparison++;
                 }
 
-                countComparison++;
+                countComparison += 2;
 
             }
 
@@ -145,6 +154,7 @@ namespace Practice
             for (int i = 0; i < input.Length; i++)
             {
                 counts[input[i] - min]++;
+                countComparison++;
             }
 
             // Декрементирует первый элемент.
@@ -155,6 +165,7 @@ namespace Practice
             {
                 counts[i] = counts[i] + counts[i - 1];
                 countTransfer++;
+                countComparison++;
             }
 
             // Сортирует массив.
@@ -162,6 +173,7 @@ namespace Practice
             {
                 temp[counts[input[i] - min]--] = input[i];
                 countTransfer++;
+                countComparison++;
             }
 
             Console.WriteLine($"Количество сравнений: {countComparison}");
