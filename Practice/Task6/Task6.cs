@@ -10,38 +10,20 @@ namespace Practice
     public class Task6
     {
         // Метод для высчитывания чисел последовательности.
-        public static double FindNum(double[] firstElems , int num, ref double[] res)
+        public static void FindNum(ref double[] elems, int count)
         {
-            // Если вызывают один из трех первых элементов последовательности,
-            // то возвращает его.
-            switch (num)
+            // Вычисляет текущий элемент. 
+            elems[count] = elems[count - 3]
+                           + elems[count - 2] / 3
+                           + 3 * elems[count - 1];
+
+            Console.WriteLine("Элемент последовательности: " + elems[count]);
+
+            // Проверяет на заполнение массива. 
+            if (count + 1 < elems.Length)
             {
-                case 0:
-                    Console.WriteLine("Введите число больше 0");
-                    return -1;
-                case 1:
-                    res[0] = firstElems[0];
-                    return firstElems[0];
-
-                case 2:
-                    res[1] = firstElems[1];
-                    return firstElems[1];
-
-                case 3:
-                    res[2] = firstElems[2];
-                    return firstElems[2];
-
+                FindNum(ref elems, count + 1);
             }
-
-            // Высчитывает элемент последовательности.
-            double actual = FindNum(firstElems, num - 1, ref res) 
-                            + FindNum(firstElems, num - 2, ref res) / 3 
-                            + 3 * FindNum(firstElems, num - 3, ref res);
-
-            // Записывает в массив полученный элем. посл-ти.
-            res[num - 1] = actual;
-
-            return actual;
         }
 
 

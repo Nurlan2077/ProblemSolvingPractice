@@ -11,36 +11,34 @@ namespace Practice
     {
         static void Main(string[] args)
         {
+            
+
+            Console.WriteLine("Введите количество чисел для вычисления: ");
+            int num = CheckUserInput(3);
+            Console.WriteLine();
+
             Console.WriteLine("Введите первые три числа последовательности: ");
 
             // Инициализация первых трех элементов.
-            double[] firstElems = new double[3];
+            double[] elems = new double[num];
 
-            firstElems[0] = CheckUserInput();
-            firstElems[1] = CheckUserInput();
-            firstElems[2] = CheckUserInput();
-
-            Console.WriteLine("Введите количество чисел для вычисления: ");
-            int num = CheckUserInput(0);
-            Console.WriteLine();
+            elems[0] = CheckUserInput();
+            elems[1] = CheckUserInput();
+            elems[2] = CheckUserInput();
 
             Console.WriteLine("Введите число M для поиска в последовательности: ");
             double numM = CheckUserInput();
             Console.WriteLine();
 
+            Console.WriteLine();
+            FindNum(ref elems, 3);   // Высчитывание эл-ов посл-ти.
 
-            double[] result = new double[num];      // Хранит элементы последовательности.
-
-            FindNum(firstElems, num, ref result);   // Высчитывание эл-ов посл-ти.
-
-            Console.WriteLine("Последовательность: ");
-
-            // Вывод элементов посл-ти через пробел.
-            foreach (double elem in result)
+            //Console.WriteLine("Последовательность:");
+            foreach(double elem in elems)
             {
                 Console.Write(elem + " ");
             }
-
+            
             Console.WriteLine();
 
             Console.WriteLine("Номера элементов, которые равны M: ");
@@ -50,11 +48,10 @@ namespace Practice
             // Проходит по эл-ам посл-ти.
             for (int i = 0; i < num; i++)
             {
-                if (result[i] == numM)
+                if (elems[i] == numM)
                 {
                     count++;
                     Console.Write((i + 1) + " ");
-
                 }
             }
 
@@ -69,14 +66,14 @@ namespace Practice
             {
                 Console.WriteLine($"Чисел равных M нет.");
             }
-
+            
             Console.WriteLine();
 
             // Анализ последовательности.
-            int analysis = AnalizeSequence(result);
-
+            int analysis = AnalizeSequence(elems);
+            
             Console.ForegroundColor = ConsoleColor.Green;
-
+            
             switch (analysis)
             {
                 case 11:
@@ -100,11 +97,11 @@ namespace Practice
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
             }
-
+            
             Console.ForegroundColor = ConsoleColor.White;
-
+            
             Console.ReadLine();
-
+            
         }
     }
 }
